@@ -1,5 +1,5 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {FlatList, ScrollView, Text} from 'react-native';
+import {FlatList, Text} from 'react-native';
 import {StackParamList} from '../../../StackParamList';
 import {ListHeader} from '../../components/ListHeader';
 

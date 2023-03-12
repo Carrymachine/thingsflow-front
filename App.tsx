@@ -47,12 +47,12 @@ function App(): JSX.Element {
           <Stack.Screen
             name="Issues" // 알림
             component={IssuesScreen}
-            options={{headerShown: true}}
+            options={{headerShown: true, title: 'Angular / Angular-cli'}}
           />
           <Stack.Screen
             name="IssueDetail" // 알림
             component={IssueDetailScreen}
-            options={{headerShown: true}}
+            options={{headerShown: true, title: 'Angular / Angular-cli'}}
           />
         </Stack.Navigator>
       </NavigationContainer>
