@@ -26,9 +26,6 @@ function App(): JSX.Element {
     defaultOptions: {
       queries: {
         useErrorBoundary: true,
-        // suspense: true,
-        // refetchOnWindowFocus: false,
-        // refetchOnMount: false,
       },
     },
   });
@@ -45,12 +42,12 @@ function App(): JSX.Element {
             },
           }}>
           <Stack.Screen
-            name="Issues" // 알림
+            name="Issues"
             component={IssuesScreen}
             options={{headerShown: true, title: 'Angular / Angular-cli'}}
           />
           <Stack.Screen
-            name="IssueDetail" // 알림
+            name="IssueDetail"
             component={IssueDetailScreen}
             options={{headerShown: true, title: 'Angular / Angular-cli'}}
           />
