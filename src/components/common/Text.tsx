@@ -1,23 +1,22 @@
 import styled from '@emotion/native';
 import {ViewStyle} from 'react-native/types';
+import React from 'react';
 
 type RGB = `rgb(${number}, ${number}, ${number})`;
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
 type HEX = `#${string}`;
 type Color = RGB | RGBA | HEX | string;
-type MARGIN = `${number}px ${number}px ${number}px ${number})px`;
 
 type FontType = {
   fontSize: number;
   fontColor?: Color;
 
-  style?: ViewStyle;
+  style?: ViewStyle | null;
 };
 
 const Text = ({
   fontSize = 14,
   fontColor = null,
-  margin = null,
   children,
   numberOfLines,
   ellipsizeMode,
@@ -25,7 +24,6 @@ const Text = ({
 }: {
   fontSize?: number;
   fontColor?: string | null;
-
   numberOfLines?: number | undefined;
   ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip' | undefined;
   children: React.ReactNode | React.ReactNode[];
