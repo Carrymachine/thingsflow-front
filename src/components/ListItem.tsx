@@ -42,14 +42,14 @@ export const ListItem = ({
               <Text
                 fontSize={10}
                 fontColor={'rgba(0, 0, 0, 0.4)'}
-                margin={'0px 8px 0px 0px'}>
+                style={{marginRight: 8}}>
                 #{id}
               </Text>
 
               <Text
                 fontSize={10}
                 fontColor={'rgba(0, 0, 0, 1)'}
-                margin={'0px 8px 0px 0px'}>
+                style={{marginRight: 8}}>
                 {date.toLocaleDateString('ko-kr')}
               </Text>
               <Text fontSize={10} fontColor={'rgba(0, 0, 0, 1)'}>
