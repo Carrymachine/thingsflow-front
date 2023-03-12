@@ -60,8 +60,14 @@ export const ListItem = ({
               style={{
                 flex: 1,
                 marginTop: 8,
-                alignItems: 'flex-end',
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
               }}>
+              <Image
+                source={require('../components/icons/comment.png')}
+                style={{width: 14, height: 14, marginRight: 8}}
+              />
               <Text fontSize={12}>{comments}</Text>
             </InnerView>
           </InnerView>

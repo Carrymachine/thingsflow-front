@@ -32,7 +32,7 @@ export const ListHeader = ({
   return (
     <HeaderView>
       <InnerView style={{flexDirection: 'row'}}>
-        <InnerView>
+        <InnerView style={{flex: 1}}>
           <Text fontSize={20} style={{marginBottom: 16}}>
             {title}
           </Text>
@@ -40,8 +40,18 @@ export const ListHeader = ({
             <Text style={{marginRight: 8}}>#{id}</Text>
             <Text style={{marginRight: 8}}>{user}</Text>
             <Text>{date.toLocaleDateString('ko-kr')}</Text>
-            <InnerView style={{flex: 1, alignItems: 'flex-end'}}>
-              <Text>{comments}</Text>
+            <InnerView
+              style={{
+                flex: 1,
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('../components/icons/comment.png')}
+                style={{width: 14, height: 14, marginRight: 8}}
+              />
+              <Text fontSize={12}>{comments}</Text>
             </InnerView>
           </InnerView>
         </InnerView>
@@ -52,8 +62,9 @@ export const ListHeader = ({
 };
 
 const HeaderView = styled.View`
+  flex: 1;
   width: 100%;
   justify-content: center;
   background: #f7f8f9;
-  margin: 32px 0px;
+  padding: 32px 0px;
 `;

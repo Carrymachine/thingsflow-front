@@ -22,7 +22,8 @@ export const IssuesScreen = ({navigation}: IssueProps) => {
         data={issues.data?.pages
           .map(page => page)
           .flat()
-          .sort((a, b) => b.comments - a.comments)}
+          .sort((a, b) => b.comments - a.comments)
+          .filter(issue => issue.state === 'open')}
         renderItem={({item: issue, index: index}) => {
           const info = {
             user: issue.user.login,
