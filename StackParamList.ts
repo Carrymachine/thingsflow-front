@@ -8,6 +8,7 @@ export type StackParamList = {
       title: string;
       comments: number;
       createdAt: string;
+      image: string;
     };
   };
 };
