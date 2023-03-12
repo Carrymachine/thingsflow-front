@@ -5,7 +5,7 @@ export const getIssues = async ({
   page = 1,
 }: {
   page?: number;
-}): Promise<issuesResponse> => {
+}): Promise<issuesResponse[]> => {
   const response = await axios.get(
     `https://api.github.com/repos/angular/angular-cli/issues?page=${page}`,
   );
