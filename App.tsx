@@ -16,6 +16,7 @@ import {QueryClient, QueryClientProvider} from 'react-query';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {StackParamList} from './StackParamList';
 import {IssuesScreen} from './src/screens/Issues/IssuesScreen';
+import {IssueDetailScreen} from './src/screens/Issues/IssueDetailScreen';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator<StackParamList>();
@@ -25,7 +26,7 @@ function App(): JSX.Element {
     defaultOptions: {
       queries: {
         useErrorBoundary: true,
-        suspense: true,
+        // suspense: true,
         // refetchOnWindowFocus: false,
         // refetchOnMount: false,
       },
@@ -39,10 +40,18 @@ function App(): JSX.Element {
           screenOptions={{
             headerShown: true,
             headerShadowVisible: false,
+            contentStyle: {
+              backgroundColor: '#f7f8f9',
+            },
           }}>
           <Stack.Screen
             name="Issues" // 알림
             component={IssuesScreen}
+            options={{headerShown: true}}
+          />
+          <Stack.Screen
+            name="IssueDetail" // 알림
+            component={IssueDetailScreen}
             options={{headerShown: true}}
           />
         </Stack.Navigator>
